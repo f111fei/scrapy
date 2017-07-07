@@ -1,9 +1,8 @@
-const Crawler = require('crawler');
-const restify = require('restify');
-const request = require('request');
+import Crawler from 'crawler';
+import restify from 'restify';
 const server = restify.createServer();
-const crawler = function (callback) {
-  return new Crawler({
+const scrape = function (url, callback) {
+  new Crawler({
     callback: function (error, res, done) {
       if (error) {
         callback(error, null);
@@ -13,10 +12,7 @@ const crawler = function (callback) {
 
       done();
     }
-  });
-}
-const scrape = function (url, callback) {
-  crawler(callback).queue(url);
+  }).queue(url);
 }
 
 // Configuration
@@ -34,19 +30,17 @@ server.get('/', function (req, res) {
         message: 'Something bad happened.',
         error: err
       });
-
-      return console.log(err);
+    } else {
+      res.send({
+        message: 'Crawled successfully.',
+        data: {
+          url,
+          title: $('title').text(),
+          description: $('meta[property="og:description"]').attr('content'),
+          image: $('meta[property="og:image"]').attr('content')
+        }
+      });
     }
-
-    res.send({
-      message: 'Crawled successfully.',
-      data: {
-        url,
-        title: $('title').text(),
-        description: $('meta[property="og:description"]').attr('content'),
-        image: $('meta[property="og:image"]').attr('content')
-      }
-    });
   });
 });
 
