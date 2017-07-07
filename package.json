@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/krisanalfa/scrappy/issues"
   },
-  "homepage": "https://github.com/krisanalfa/scrappy#readme"
+  "homepage": "https://github.com/krisanalfa/scrappy#readme",
+  "dependencies": {
+    "restify": "^5.0.0"
+  }
 }
