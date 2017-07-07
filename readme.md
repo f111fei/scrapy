@@ -1,3 +1,3 @@
-# Scrappy
+# Scrapy
 
-Scrappy is advance web scrapper for developer.
+Scrapy is advance web scraper.

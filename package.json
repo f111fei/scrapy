@@ -1,14 +1,14 @@
 {
   "name": "scrapy",
   "version": "1.0.0",
-  "description": "Advance Web Scrapper for Developer",
+  "description": "Advance Web Scraper for Developer",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krisanalfa/scrappy.git"
+    "url": "git+https://github.com/krisanalfa/scrapy.git"
   },
   "keywords": [
     "scrapper"
@@ -16,9 +16,9 @@
   "author": "Krisan Alfa Timur <krisan47@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/krisanalfa/scrappy/issues"
+    "url": "https://github.com/krisanalfa/scrapy/issues"
   },
-  "homepage": "https://github.com/krisanalfa/scrappy#readme",
+  "homepage": "https://github.com/krisanalfa/scrapy#readme",
   "dependencies": {
     "crawler": "^1.0.5",
     "restify": "^5.0.0"

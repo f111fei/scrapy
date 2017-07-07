@@ -20,7 +20,7 @@ const scrape = function (url, callback) {
 }
 
 // Configuration
-server.name = 'Scrappy'
+server.name = 'Scrapy'
 
 // Routing
 server.get('/', function (req, res) {
