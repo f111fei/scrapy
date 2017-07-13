@@ -1,5 +1,9 @@
-var restify = require('restify')
-var scraper = require('./lib/scraper')
+const restify = require('restify')
+const scraper = require('./lib/scraper')
+const knexfile = require('./knexfile')
+const knex = require('knex')(knexfile.development)
+const bookshelf = require('bookshelf')(knex)
+
 const server = restify.createServer()
 
 // Configuration

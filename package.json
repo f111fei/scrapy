@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/krisanalfa/scrapy#readme",
   "dependencies": {
+    "bookshelf": "^0.10.3",
     "crawler": "^1.0.5",
+    "knex": "^0.13.0",
+    "mssql": "^4.0.4",
     "restify": "^5.0.0"
   }
 }
